@@ -124,7 +124,9 @@ function GetAllProducts(arr) {
 function GetProductById(arr) {
   let id = readline.question("Id: ");
   let product = arr.find((item) => item.id == id);
-  console.table(product);
+  if (product) {
+    console.table(product);
+  } else console.log("-------------------------\nProduct not found!!\n-------------------------");
 }
 
 //#endregion
